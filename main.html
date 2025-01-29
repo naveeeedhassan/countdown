@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #countdown {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function startCountdown(targetDate) {
+            const timer = document.getElementById("countdown");
+            setInterval(() => {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+                if (distance < 0) { timer.innerHTML = "Time's up!"; return; }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }, 1000);
+        }
+
+        window.onload = function () {
+            startCountdown(new Date("2025-02-01T12:00:00Z").getTime());
+        };
+    </script>
+</head>
+<body>
+    <div id="countdown"></div>
+</body>
+</html>
