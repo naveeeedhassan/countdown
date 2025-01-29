@@ -35,6 +35,7 @@
         .countdown-item {
             display: inline-block;
             margin: 0 15px;
+            vertical-align: middle; /* Ensures vertical alignment */
         }
 
         .countdown-item span {
@@ -42,6 +43,7 @@
             font-size: 36px;
             font-weight: bold;
             color: white; /* Consistent white text for all timer numbers */
+            line-height: 1; /* Adjust line-height to bring the numbers closer to the label */
         }
 
         .countdown-item label {
@@ -49,6 +51,8 @@
             font-weight: normal;
             text-transform: uppercase;
             color: rgba(255, 255, 255, 0.7); /* Light gray for labels */
+            display: block;
+            margin-top: 5px; /* Add slight space between the number and the label */
         }
 
         /* Responsive Design */
