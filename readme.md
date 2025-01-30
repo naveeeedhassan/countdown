@@ -49,10 +49,6 @@ The timer container has a gradient background (from purple to blue) by default. 
 
 You can change the colors or adjust the gradient direction according to your preferences.
 
-### Responsive Design
-
-The countdown timer is fully responsive and will adjust for smaller screen sizes like mobile phones and tablets.
-
 ### Example Target Date
 
 To set the timer for a different target, for example, December 31, 2025, at midnight UTC, modify the `startCountdown` function like this:
